@@ -1,66 +1,244 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>WE SOURCE | Furniture Sourcing Partner India</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 
-body{
-font-family:Arial,sans-serif;
+*{
 margin:0;
 padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#111;
+color:#fff;
 line-height:1.6;
 }
 
-header{
-background:#222;
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,.85);
+backdrop-filter:blur(10px);
+z-index:1000;
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo-nav{
+height:50px;
+}
+
+.navbar a{
 color:white;
-padding:60px 20px;
+text-decoration:none;
+margin-left:25px;
+font-size:14px;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('images/hero.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
 text-align:center;
+padding:20px;
+}
+
+.hero-content img{
+width:180px;
+margin-bottom:25px;
+}
+
+.hero h1{
+font-size:56px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:20px;
+max-width:800px;
+margin:auto;
+color:#ddd;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 35px;
+background:#c9a14a;
+color:#fff;
+text-decoration:none;
+border-radius:40px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#e0b75a;
+transform:translateY(-3px);
 }
 
 section{
-padding:50px 20px;
-max-width:1000px;
-margin:auto;
+padding:90px 8%;
 }
 
-h2{
-color:#222;
+.section-title{
+text-align:center;
+font-size:38px;
+margin-bottom:50px;
+color:#c9a14a;
+}
+
+.about{
+background:#181818;
+}
+
+.about p{
+max-width:1000px;
+margin:auto;
+text-align:center;
+font-size:18px;
+color:#ddd;
 }
 
 .services{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
-.card{
-background:#f4f4f4;
+.service-box{
+background:#1c1c1c;
+padding:30px;
+border-radius:15px;
+transition:.3s;
+border:1px solid #222;
+}
+
+.service-box:hover{
+transform:translateY(-8px);
+border-color:#c9a14a;
+}
+
+.service-box h3{
+color:#c9a14a;
+margin-bottom:10px;
+}
+
+.products{
+background:#181818;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.product-card{
+background:#111;
+border-radius:15px;
+overflow:hidden;
+transition:.3s;
+}
+
+.product-card:hover{
+transform:translateY(-10px);
+}
+
+.product-card img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.product-card h3{
 padding:20px;
-border-radius:10px;
-}
-
-footer{
-background:#222;
-color:white;
 text-align:center;
-padding:20px;
+}
+  .why-us{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.why-box{
+background:#1c1c1c;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.contact{
+background:#181818;
+text-align:center;
+}
+
+.contact p{
+margin:12px 0;
+font-size:18px;
+}
+
+.footer{
+background:#000;
+padding:25px;
+text-align:center;
+font-size:14px;
+color:#aaa;
 }
 
 .whatsapp{
 position:fixed;
-bottom:20px;
 right:20px;
+bottom:20px;
 background:#25D366;
 color:white;
-padding:15px 20px;
+padding:15px 22px;
 border-radius:50px;
 text-decoration:none;
-font-weight:bold;
+font-weight:600;
+z-index:999;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.logo-nav{
+height:40px;
+}
+
+.section-title{
+font-size:28px;
+}
+
 }
 
 </style>
@@ -68,102 +246,191 @@ font-weight:bold;
 
 <body>
 
-<header>
+<nav class="navbar">
+<img src="images/logo.png" class="logo-nav">
+<div>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#products">Products</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 
-<h1>WE SOURCE</h1>
+<section class="hero">
 
-<h3>Your Trusted Furniture Sourcing Partner in India</h3>
+<div class="hero-content">
+
+<img src="images/logo.png">
+
+<h1>Furniture Sourcing Partner In India</h1>
 
 <p>
-Helping global buyers source quality furniture and handicrafts from India.
+Helping global buyers source handcrafted furniture, stone furniture,
+home décor and custom-made products from trusted Indian manufacturers.
 </p>
 
-</header>
+<a href="#contact" class="btn">
+Get A Quote
+</a>
 
-<section>
+</div>
 
-<h2>Our Services</h2>
+</section>
+
+<section class="about" id="about">
+
+<h2 class="section-title">
+About WE SOURCE
+</h2>
+
+<p>
+WE SOURCE is a furniture sourcing and consultancy company based in India.
+We help importers, wholesalers, retailers and furniture brands source
+high-quality products from trusted Indian manufacturers. From product
+development to quality control and shipment coordination, we simplify
+the sourcing process for global buyers.
+</p>
+
+</section>
+
+<section id="services">
+
+<h2 class="section-title">
+Our Services
+</h2>
 
 <div class="services">
 
-<div class="card">
+<div class="service-box">
 <h3>Product Sourcing</h3>
+<p>Reliable sourcing from verified Indian manufacturers.</p>
 </div>
 
-<div class="card">
-<h3>Vendor Verification</h3>
-</div>
-
-<div class="card">
-<h3>Quality Inspection</h3>
-</div>
-
-<div class="card">
-<h3>Packaging Development</h3>
-</div>
-
-<div class="card">
-<h3>Shipment Coordination</h3>
-</div>
-
-<div class="card">
+<div class="service-box">
 <h3>Product Development</h3>
+<p>Custom furniture development as per buyer requirements.</p>
+</div>
+
+<div class="service-box">
+<h3>Vendor Verification</h3>
+<p>Factory audits and supplier verification support.</p>
+</div>
+
+<div class="service-box">
+<h3>Quality Inspection</h3>
+<p>Production monitoring and quality assurance services.</p>
+</div>
+
+<div class="service-box">
+<h3>Packaging Development</h3>
+<p>Export packaging solutions for safe transportation.</p>
+</div>
+
+<div class="service-box">
+<h3>Shipment Coordination</h3>
+<p>Documentation and shipment follow-up support.</p>
 </div>
 
 </div>
 
 </section>
 
+<section class="products" id="products">
+
+<h2 class="section-title">
+Featured Products
+</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+<img src="images/dresser.jpg">
+<h3>Dresser Collection</h3>
+</div>
+
+<div class="product-card">
+<img src="images/sofa-console.jpg">
+<h3>Sofa Console</h3>
+</div>
+
+<div class="product-card">
+<img src="images/blue-sideboard.jpg">
+<h3>Blue Sideboard</h3>
+</div>
+
+<div class="product-card">
+<img src="images/wood-sideboard.jpg">
+<h3>Wood Sideboard</h3>
+</div>
+
+</div>
+
+</section>
 <section>
 
-<h2>About Us</h2>
+<h2 class="section-title">
+Why Choose WE SOURCE
+</h2>
 
-<p>
-WE SOURCE is an India-based sourcing and consultancy company helping importers, retailers, wholesalers and furniture brands source quality products from trusted Indian manufacturers.
-</p>
+<div class="why-us">
+
+<div class="why-box">
+<h3>Trusted Vendor Network</h3>
+<p>Access to reliable and export-ready manufacturers.</p>
+</div>
+
+<div class="why-box">
+<h3>Quality Assurance</h3>
+<p>Strict quality checks throughout production.</p>
+</div>
+
+<div class="why-box">
+<h3>Competitive Pricing</h3>
+<p>Best sourcing solutions without compromising quality.</p>
+</div>
+
+<div class="why-box">
+<h3>Production Monitoring</h3>
+<p>Regular updates and transparency during production.</p>
+</div>
+
+<div class="why-box">
+<h3>Export Documentation</h3>
+<p>Support for shipment and export documentation.</p>
+</div>
+
+<div class="why-box">
+<h3>Global Buyer Experience</h3>
+<p>Serving importers, wholesalers and retailers worldwide.</p>
+</div>
+
+</div>
 
 </section>
 
-<section>
+<section class="contact" id="contact">
 
-<h2>Products We Source</h2>
+<h2 class="section-title">
+Contact Us
+</h2>
 
-<ul>
-<li>Dining Tables</li>
-<li>Coffee Tables</li>
-<li>Sideboards</li>
-<li>TV Units</li>
-<li>Cabinets</li>
-<li>Beds</li>
-<li>Outdoor Furniture</li>
-<li>Wooden Furniture</li>
-<li>Metal Furniture</li>
-<li>Stone Furniture</li>
-</ul>
+<p>📞 +91 9511567403</p>
 
-</section>
+<p>📧 wesourc@gmail.com</p>
 
-<section>
+<p>📍 Jodhpur, Rajasthan, India</p>
 
-<h2>Contact Us</h2>
-
-<p>
-📍 Jodhpur & Jaipur, Rajasthan, India
-</p>
-
-<p>
-📞 +91 9511567403
-</p>
-
-<p>
-📧 wesourc@gmail.com
-</p>
+<a href="https://wa.me/919511567403" class="btn">
+WhatsApp Us
+</a>
 
 </section>
 
-<footer>
+<footer class="footer">
 
-<p>© 2026 WE SOURCE. All Rights Reserved.</p>
+<p>
+© 2026 WE SOURCE | Furniture Sourcing Partner India
+</p>
 
 </footer>
 
@@ -171,10 +438,9 @@ WE SOURCE is an India-based sourcing and consultancy company helping importers, 
 href="https://wa.me/919511567403"
 target="_blank">
 
-WhatsApp Us
+WhatsApp
 
 </a>
 
 </body>
 </html>
-<!-- update -->
